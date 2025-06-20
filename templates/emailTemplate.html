@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You for Contacting Us</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        color: #333;
+        line-height: 1.6;
+        padding: 20px;
+      }
+      .container {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+      }
+      h1 {
+        font-size: 22px;
+        text-align: center;
+      }
+      p {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-top: 20px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #47be23; /* Green */
+        text-decoration: none;
+        border-radius: 5px;
+        text-align: center;
+      }
+      .button:hover {
+        background-color: #38a218; /* Darker green on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1><strong>Pertanyaan {{subject}} dari {{name}}!</strong></h1>
+      <br /><br />
+      <div>
+        <p><strong>Nama :</strong> {{name}}</p>
+        <p><strong>Email :</strong> {{email}}</p>
+        <p><strong>Pesan :</strong> {{message}}</p>
+      </div>
+
+      <!-- Button to reply to the user -->
+      <a
+        href="mailto:{{email}}?subject=Balasan%20pesan%20{{subject}}%20dari%20Binadinamitarama&body=Halo%20{{name}},%20berikut%20adalah%20balasan%20pesan%20anda."
+        class="button"
+        >Balas Pesan {{name}}</a
+      >
+    </div>
+  </body>
+</html>
